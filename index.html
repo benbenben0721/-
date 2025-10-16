@@ -1,44 +1,95 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>我的旅遊攝影網站</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
+  <!-- 頁首 -->
   <header>
     <h1>我的旅遊攝影網站</h1>
     <nav>
-      <a href="index.html">首頁</a>
-      <a href="about.html">關於我</a>
-      <a href="gallery.html">作品集</a>
-      <a href="stats.html">統計資料</a>
-      <a href="links.html">友站連結</a>
+      <a href="#home">首頁</a>
+      <a href="#about">關於我</a>
+      <a href="#gallery">作品集</a>
+      <a href="#stats">統計圖表</a>
+      <a href="#links">友站連結</a>
     </nav>
   </header>
 
+  <!-- 主內容 -->
   <main>
-    <section>
+    <!-- 首頁介紹 -->
+    <section id="home">
       <h2>歡迎來到我的網站</h2>
       <p>這裡分享我在世界各地旅行與拍攝的美麗風景。</p>
     </section>
 
-    <section>
+    <!-- 關於我 -->
+    <section id="about">
+      <h2>關於我</h2>
+      <p>嗨！我是熱愛旅遊與攝影的創作者，喜歡用鏡頭捕捉世界的色彩。</p>
+      <img src="photo.jpg" alt="我拍的風景照" class="responsive-img">
+    </section>
+
+    <!-- 作品集：影片 -->
+    <section id="gallery">
       <h2>我最喜歡的影片</h2>
-      <iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/tgbNymZ7vqY" 
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY"
         title="YouTube video player" frameborder="0" allowfullscreen></iframe>
     </section>
 
-    <section>
-      <h2>我最喜歡的照片</h2>
-      <img src="photo.jpg" alt="CHESS" class="responsive-img">
+    <!-- 統計圖表（整合自 stats.html） -->
+    <section id="stats">
+      <h2>我旅遊過的國家統計</h2>
+      <canvas id="travelChart" width="400" height="200"></canvas>
+    </section>
+
+    <!-- 友站連結 -->
+    <section id="links">
+      <h2>同學網站連結</h2>
+      <ul>
+        <li><a href="https://classmate1.github.io/web1/" target="_blank">小明的美食網站</a></li>
+        <li><a href="https://classmate2.github.io/web2/" target="_blank">小美的寵物世界</a></li>
+        <li><a href="https://classmate3.github.io/web3/" target="_blank">阿華的音樂分享</a></li>
+      </ul>
     </section>
   </main>
 
+  <!-- 頁尾 -->
   <footer>
     <p>© 2025 我的旅遊攝影網站</p>
   </footer>
+
+  <!-- Chart.js 統計圖表 -->
+  <script>
+    const ctx = document.getElementById('travelChart');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['日本', '韓國', '法國', '泰國', '台灣'],
+        datasets: [{
+          label: '旅遊次數',
+          data: [5, 3, 2, 4, 8],
+          backgroundColor: ['#ff6384', '#36a2eb', '#ffce56', '#4bc0c0', '#9966ff'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: { stepSize: 1 }
+          }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
