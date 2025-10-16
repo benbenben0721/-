@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>我的旅遊攝影網站</title>
+  <title>簡嘉亨的網站</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -11,7 +11,7 @@
 <body>
   <!-- 頁首 -->
   <header>
-    <h1>我的旅遊攝影網站</h1>
+    <h1>我的網站</h1>
     <nav>
       <a href="#home">首頁</a>
       <a href="#about">關於我</a>
@@ -26,13 +26,12 @@
     <!-- 首頁介紹 -->
     <section id="home">
       <h2>歡迎來到我的網站</h2>
-      <p>這裡分享我在世界各地旅行與拍攝的美麗風景。</p>
     </section>
 
     <!-- 關於我 -->
     <section id="about">
       <h2>關於我</h2>
-      <p>嗨！我是熱愛旅遊與攝影的創作者，喜歡用鏡頭捕捉世界的色彩。</p>
+      <p>這是我最喜歡的西洋棋圖片</p>
       <img src="photo.jpg" alt="我拍的風景照" class="responsive-img">
     </section>
 
@@ -40,13 +39,13 @@
     <section id="gallery">
       <h2>我最喜歡的影片</h2>
       <iframe width="560" height="315"
-        src="https://www.youtube.com/embed/tgbNymZ7vqY"
+        src="https://www.youtube.com/watch?v=tBVkGY_7Fy4"
         title="YouTube video player" frameborder="0" allowfullscreen></iframe>
     </section>
 
     <!-- 統計圖表（整合自 stats.html） -->
     <section id="stats">
-      <h2>我旅遊過的國家統計</h2>
+      <h2>我去過的國家統計</h2>
       <canvas id="travelChart" width="400" height="200"></canvas>
     </section>
 
@@ -63,7 +62,7 @@
 
   <!-- 頁尾 -->
   <footer>
-    <p>© 2025 我的旅遊攝影網站</p>
+    <p>© 2025 我的網站</p>
   </footer>
 
   <!-- Chart.js 統計圖表 -->
@@ -74,7 +73,7 @@
       data: {
         labels: ['日本', '韓國', '法國', '泰國', '台灣'],
         datasets: [{
-          label: '旅遊次數',
+          label: '次數',
           data: [5, 3, 2, 4, 8],
           backgroundColor: ['#ff6384', '#36a2eb', '#ffce56', '#4bc0c0', '#9966ff'],
           borderWidth: 1
@@ -93,3 +92,4 @@
   </script>
 </body>
 </html>
+
